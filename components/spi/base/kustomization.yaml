@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - https://github.com/redhat-appstudio/service-provider-integration-operator/config/openshift?ref=f2a6744f84ece2d7c6957deb58bccf01ab1c2fef
+
+images:
+  - name:  quay.io/redhat-appstudio/service-provider-integration-operator
+    newName: quay.io/redhat-appstudio/service-provider-integration-operator
+    newTag: f2a6744f84ece2d7c6957deb58bccf01ab1c2fef
+  - name: quay.io/redhat-appstudio/service-provider-integration-oauth
+    newName: quay.io/redhat-appstudio/service-provider-integration-oauth
+    newTag: f2a6744f84ece2d7c6957deb58bccf01ab1c2fef
+
+namespace: spi-system
+
+patchesStrategicMerge:
+  - delete-shared-configuration-file.yaml

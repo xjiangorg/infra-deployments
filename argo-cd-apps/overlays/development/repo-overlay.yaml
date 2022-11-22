@@ -74,6 +74,7 @@ spec:
   source:
     repoURL: https://github.com/redhat-appstudio/infra-deployments.git
     targetRevision: main
+    path: components/spi/overlays/development
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
