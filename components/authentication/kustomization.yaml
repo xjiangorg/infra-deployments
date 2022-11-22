@@ -6,6 +6,7 @@ resources:
 - view-spi.yaml
 - view-integration.yaml
 - spi-ci.yaml
+- spi-vault-admin.yaml
 - user-ci-maintainer.yaml
 - gitops-ci.yaml
 - release-ci.yaml
