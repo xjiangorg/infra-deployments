@@ -43,6 +43,7 @@ yq -i e ".0.value=\"$SPI_API_SERVER\"" $ROOT/components/spi/overlays/development
 # and the base URL set to the SPI_BASE_URL variable or the URL of the  route to the SPI OAuth service in the current cluster
 # This script also sets up the Vault client to accept insecure TLS connections so that the custom vault host doesn't have
 # to serve requests using a trusted TLS certificate.
+exit 1
 $ROOT/hack/util-patch-spi-config.sh
 # configure the secrets and providers in SPI
 TMP_FILE=$(mktemp)
