@@ -62,7 +62,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   source:
-    path: components/spi/overlays/staging
+    path: components/spi/overlays/development
     repoURL: https://github.com/redhat-appstudio/infra-deployments.git
     targetRevision: main
 ---
