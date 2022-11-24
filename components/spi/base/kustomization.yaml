@@ -14,5 +14,11 @@ images:
 
 namespace: spi-system
 
+
+patches:
+  - target:
+      kind: Deployment
+      name: spi-controller-manager
+    path: operator-limits-patch.json
 patchesStrategicMerge:
   - delete-shared-configuration-file.yaml
